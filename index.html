@@ -293,6 +293,17 @@
     $('#hamburger').click(function(){
         $('#collapse').slideToggle('slow');
     });
+    $(window).scroll(function(e){
+        if(e.pageY > 0){
+            $($('nav')[0]).css('animation','changeBGnav .3s  normal ease-in-out forwards');
+            $('#logo-container').css('animation','changeColorLogo .3s  normal ease-in-out forwards');
+            $('#hamburger li').css('animation','changeBGham .3s  normal ease-in-out forwards');
+        }else{
+            $($('nav')[0]).css('animation','changeBG2nav .3s  normal ease-in-out forwards');
+            $('#logo-container').css('animation','changeColor2Logo .3s  normal ease-in-out forwards');
+            $('#hamburger li').css('animation','changeBG2ham .3s  normal ease-in-out forwards');
+        }
+    });
 </script>
 </body>
 </html>
