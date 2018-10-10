@@ -727,3 +727,10 @@ a{
         margin-top: 50px;
     }
 }
+
+@media screen and (max-width:400px){
+    #form-container{
+        width: 80%;
+    }
+    
+}
