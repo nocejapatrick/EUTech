@@ -9,7 +9,7 @@
     <title>EUTech</title>
 </head>
 <body>
-<section id="header">
+<section id="home">
     <nav>
         <div class="container">
             <div id="logo-container">
@@ -17,10 +17,10 @@
             </div>
             <div id="nav-list">
                 <ul>
-                    <li><a href="">HOME</a></li>
-                    <li><a href="">COMPANY</a></li>
-                    <li><a href="">SERVICES</a></li>
-                    <li><a href="">CONTACT</a></li>
+                    <li class="links"><a href="">HOME</a></li>
+                    <li class="links"><a href="">ABOUT</a></li>
+                    <li class="links"><a href="">SERVICES</a></li>
+                    <li class="links"><a href="">CONTACT</a></li>
                 </ul>
             </div>
             <div id="hamburger">
@@ -35,10 +35,10 @@
     <div id="collapse">
             <div id="drop-down">
                 <ul>
-                    <li><a href="">HOME</a></li>
-                    <li><a href="">COMPANY</a></li>
-                    <li><a href="">SERVICES</a></li>
-                    <li><a href="">CONTACT</a></li>
+                    <li class="links"><a href="">HOME</a></li>
+                    <li class="links"><a href="">ABOUT</a></li>
+                    <li class="links"><a href="">SERVICES</a></li>
+                    <li class="links"><a href="">CONTACT</a></li>
                 </ul>
             </div>
         </div>
@@ -290,6 +290,7 @@
     </div>
 </section>   
 <script>
+$(document).ready(function(){
     $('#hamburger').click(function(){
         $('#collapse').slideToggle('slow');
     });
@@ -304,11 +305,16 @@
             $('#hamburger li').css('animation','changeBG2ham .3s  normal ease-in-out forwards');
         }
     });
-
-    $(window).bind('touchmove',function(e){
+    $('.links').click(function(e){
         e.preventDefault()
-        console.log(e)
+        $('html,body').animate({
+            scrollTop: $('#'+e.target.innerText.toLowerCase()).offset().top - 70
+        },1000)
     });
+    $('#collapse .links').click(function(){
+        $('#hamburger').click();
+    })
+})
 </script>
 </body>
 </html>
