@@ -23,7 +23,7 @@ li{
 #collapse{
     position: fixed;
     text-align: center;
-    top: 78px;
+    top: 70px;
     width: 100%;
     display: none;
     background: white;
@@ -54,7 +54,6 @@ li{
     float: right;
     width: 50px;
     /* background: white; */
-    padding: 4px 0px;
     cursor: pointer;
     transition: .3s all linear;
     display: none;
@@ -533,9 +532,69 @@ a{
 #touch-2{
     display: none;
 }
-@media screen and (max-width:1450px){
-   
+@keyframes changeColorLogo{
+    from{
+        color: white
+    }
+    to{
+        color: #22325e;
+    }
 }
+@keyframes changeColor2Logo{
+    from{
+        color: #22325e
+    }
+    to{
+        color: white;
+    }
+}
+/* #logo-container{
+    animation: changeColorLogo .3s  normal ease-in-out forwards;
+} */
+
+@keyframes changeBGnav{
+    from{
+        background:#22325e;
+    }
+    to{
+        background: white;
+    }
+}
+
+
+@keyframes changeBG2nav{
+    from{
+        background: white;
+    }
+    to{
+        background:#22325e;
+    }
+}
+/* nav{
+    animation: changeBGnav .3s  normal ease-in-out forwards;
+} */
+
+@keyframes changeBGham{
+    from{
+        background:white;
+    }
+    to{
+        background: #22325e;
+    }
+}
+@keyframes changeBG2ham{
+    from{
+        background:#22325e;
+    }
+    to{
+        background: white;
+    }
+}
+/* #hamburger li{
+    animation: changeBGham .3s  normal ease-in-out forwards;
+} */
+
+
 @media screen and (max-width:1250px){
     #about-content #about-p{
         width: 85%;
@@ -598,19 +657,19 @@ a{
         padding: 20px;
         width: 100%;
         top:0px;
-        background: white;
+        background: transparent;
         z-index: 2;
     }
     #logo-container{
-        color: #22325e;
+        color: white;
         margin-left: -30px;
     }
     #hamburger li{
-        background: #22325e;
+        background: white;
     }
 }
 
-@media screen and (max-width:635px){
+@media screen and (max-width:650px){
     .padding-container{
         padding-left: 0px;
     }
