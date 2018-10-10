@@ -294,7 +294,7 @@
         $('#collapse').slideToggle('slow');
     });
     $(window).scroll(function(e){
-        if(e.pageY > 0){
+        if($(window).scrollTop() > 0){
             $($('nav')[0]).css('animation','changeBGnav .3s  normal ease-in-out forwards');
             $('#logo-container').css('animation','changeColorLogo .3s  normal ease-in-out forwards');
             $('#hamburger li').css('animation','changeBGham .3s  normal ease-in-out forwards');
@@ -303,6 +303,11 @@
             $('#logo-container').css('animation','changeColor2Logo .3s  normal ease-in-out forwards');
             $('#hamburger li').css('animation','changeBG2ham .3s  normal ease-in-out forwards');
         }
+    });
+
+    $(window).bind('touchmove',function(e){
+        e.preventDefault()
+        console.log(e)
     });
 </script>
 </body>
